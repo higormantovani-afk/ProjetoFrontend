@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eventos Acadêmicos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topo">
+    <h1>Eventos acadêmicos</h1>
+    <p>Cadastre e consulte palestras, workshops e jornadas do campus.</p>
+  </header>
+
+  <main>
+    <section class="painel" aria-labelledby="t-form">
+      <h2 id="t-form">Novo evento</h2>
+      <form id="form-evento" novalidate>
+        <label>Título
+          <input type="text" id="titulo" maxlength="150" required />
+        </label>
+        <label>Descrição
+          <textarea id="descricao" rows="3"></textarea>
+        </label>
+        <div class="linha">
+          <label>Data
+            <input type="text" id="data_evento" placeholder="dd/mm/aaaa" maxlength="10" required />
+          </label>
+          <label>Local
+            <input type="text" id="local" maxlength="100" required />
+          </label>
+        </div>
+        <button type="submit">Cadastrar evento</button>
+        <p id="mensagem" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="painel" aria-labelledby="t-lista">
+      <h2 id="t-lista">Próximos eventos</h2>
+      <ul id="lista-eventos" class="eventos"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

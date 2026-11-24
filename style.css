@@ -1,0 +1,47 @@
+:root {
+  --fundo: #eef2f7;
+  --texto: #14213d;
+  --suave: #5b6b84;
+  --azul: #1d4ed8;
+  --azul-esc: #1e3a8a;
+  --borda: #cfd8e6;
+  --ok: #166534;
+  --erro: #b91c1c;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; font-family: "Segoe UI", system-ui, sans-serif;
+  background: var(--fundo); color: var(--texto); line-height: 1.5;
+}
+.topo { background: var(--azul-esc); color: #fff; padding: 2rem 1.5rem; }
+.topo h1 { margin: 0 0 .25rem; font-size: 1.9rem; }
+.topo p { margin: 0; opacity: .85; }
+main {
+  max-width: 960px; margin: 0 auto; padding: 1.5rem;
+  display: grid; gap: 1.5rem; grid-template-columns: 1fr 1.3fr; align-items: start;
+}
+.painel { background: #fff; border: 1px solid var(--borda); border-radius: 8px; padding: 1.25rem; }
+h2 { margin: 0 0 1rem; font-size: 1.2rem; }
+label { display: block; font-weight: 600; font-size: .9rem; margin-bottom: .8rem; }
+input, textarea {
+  width: 100%; margin-top: .25rem; padding: .55rem .65rem; font: inherit;
+  border: 1px solid var(--borda); border-radius: 6px;
+}
+input:focus-visible, textarea:focus-visible, button:focus-visible { outline: 3px solid #93b4ff; outline-offset: 1px; }
+.linha { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; }
+button {
+  background: var(--azul); color: #fff; border: 0; border-radius: 6px;
+  padding: .65rem 1.1rem; font: inherit; font-weight: 600; cursor: pointer;
+}
+button:hover { background: var(--azul-esc); }
+button:disabled { opacity: .6; cursor: wait; }
+#mensagem { min-height: 1.4em; margin: .75rem 0 0; font-size: .9rem; }
+#mensagem.ok { color: var(--ok); }
+#mensagem.erro { color: var(--erro); }
+.eventos { list-style: none; margin: 0; padding: 0; display: grid; gap: .8rem; }
+.evento { border-left: 4px solid var(--azul); background: #f7f9fc; padding: .8rem 1rem; border-radius: 0 6px 6px 0; }
+.evento h3 { margin: 0 0 .25rem; font-size: 1.05rem; }
+.evento .meta { color: var(--suave); font-size: .85rem; margin: 0 0 .4rem; }
+.evento p { margin: 0; font-size: .92rem; }
+.vazio { color: var(--suave); }
+@media (max-width: 760px) { main { grid-template-columns: 1fr; } }
