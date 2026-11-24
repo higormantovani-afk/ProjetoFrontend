@@ -1,5 +1,5 @@
 // URL pública da API no Render (troque pela sua, sem barra no final)
-const API_URL = "https://SEU-BACKEND.onrender.com";
+const API_URL = "https://projeto-1bbu.onrender.com";
 
 const lista = document.getElementById("lista-eventos");
 const form = document.getElementById("form-evento");
